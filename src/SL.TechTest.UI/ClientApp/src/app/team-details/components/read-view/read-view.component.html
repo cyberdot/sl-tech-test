@@ -1,0 +1,11 @@
+<ng-container *ngIf="isViewMode">
+  <div class="team-name pt-1">
+    <span class="label">Team:</span> {{ teamName }}
+  </div>
+  <div class="team-country pt-3">
+    <span class="label">Country:</span> {{ teamCountry }}
+  </div>
+  <div class="team-eliminated pt-3">
+    <span class="label">Eliminated:</span> {{ teamEliminated | eliminationLabel}}
+  </div>
+</ng-container>

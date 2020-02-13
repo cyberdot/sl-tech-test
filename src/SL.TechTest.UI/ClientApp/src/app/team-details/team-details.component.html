@@ -1,0 +1,38 @@
+
+<div class="team-details mat-elevation-z8">
+  <h1 class="team-header">Team Details</h1>
+  <mat-divider></mat-divider>
+  <div class="row">
+    <div class="col-3 py-3">
+      <img src="{{ teamBadgeUrl }}" class="team-logo" />
+    </div>
+    <div class="col-4 py-3">
+      <app-read-view [team]="team" [isViewMode]="!inEditMode"></app-read-view>
+      <app-edit-view [team]="team" [isEditMode]="inEditMode"></app-edit-view>
+    </div>
+    <div class="col-5 py-3" style="text-align: right;">
+      <div>
+        <button mat-raised-button color="primary" class="profile-btn" (click)="navigateToUefaProfile(team.id)">
+          <mat-icon aria-hidden="false" aria-label="UEFA Profile">language</mat-icon>
+          UEFA Profile
+        </button>
+      </div>
+      <div class="pt-5 mt-4" *ngIf="!inEditMode">
+        <button mat-raised-button color="primary" class="profile-btn" (click)="edit()">
+          <mat-icon aria-hidden="false" aria-label="Edit team">create</mat-icon>
+          Edit Team
+        </button>
+      </div>
+      <div class="pt-5 mt-5" *ngIf="inEditMode" style="margin-top: 4em !important;">
+        <button mat-raised-button class="cancel-btn" (click)="cancel()">
+          <mat-icon aria-hidden="false" aria-label="Cancel team edit">cancel</mat-icon>
+          Cancel
+        </button>
+        <button mat-raised-button color="primary" class="" (click)="save()">
+          <mat-icon aria-hidden="false" aria-label="Update team">save</mat-icon>
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

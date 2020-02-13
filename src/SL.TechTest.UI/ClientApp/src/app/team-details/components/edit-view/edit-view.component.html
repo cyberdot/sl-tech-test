@@ -1,0 +1,21 @@
+<ng-container *ngIf="isEditMode">
+  <form [formGroup]="editForm">
+    <div class="team-name pt-1">
+      <span class="label">Team:</span>
+      <mat-form-field>
+        <input matInput formControlName="teamName" placeholder="Team name">
+      </mat-form-field>
+    </div>
+    <div class="team-country pt-3">
+      <span class="label">Country:</span>
+      <mat-form-field>
+        <mat-select formControlName="teamCountry" placeholder="Select country" [(value)]="selected">
+          <mat-option *ngFor="let country of countries" [value]="country">{{ country }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="team-eliminated pt-3">
+      <mat-checkbox labelPosition="before" formControlName="isTeamEliminated">Eliminated        </mat-checkbox>
+    </div>
+  </form>
+</ng-container>

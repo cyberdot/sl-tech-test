@@ -1,0 +1,16 @@
+.team-name {
+  font-size: 24px;
+}
+
+.team-country {
+  font-size: 22px;
+}
+
+.label {
+  width: 120px;
+  display: inline-block;
+}
+
+.team-eliminated {
+  font-size: 22px
+}

@@ -1,0 +1,25 @@
+
+.team-details {
+  margin-top: 5em;
+  padding: 20px;
+}
+
+.team-header {
+  font-size: 18px;
+}
+
+
+.team-logo {
+  width: 150px;
+  height: 150px;
+}
+
+.profile-btn {
+  width: 150px;
+}
+
+.cancel-btn {
+  margin-right: 10px;
+}
+
+
